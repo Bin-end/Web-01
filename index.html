@@ -39,7 +39,7 @@
     <li>Phase_1: <p5></p5></li>
     <li>Phase_2: <p6></p6></li>
     <li>Phase_3: <p7></p7></li>
-
+</body>
     
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -59,21 +59,19 @@
                 console.log(msg.Solar_input_power_2);
                 console.log(msg.bat_soc_percent);
                 
-                $( "p1" ).append(msg.Solar_input_power_1);
-                $( "p2" ).append(msg.Solar_input_power_2);
-                $( "p3" ).append(msg.Battery_voltage);
-                $( "p4" ).append(msg.Battery_capacity);
-                $( "p5" ).append(msg.ph1_load);
-                $( "p6" ).append(msg.ph2_load);
-                $( "p7" ).append(msg.ph3_load);
+                $( "p1" ).html(msg.Solar_input_power_1);
+                $( "p2" ).html(msg.Solar_input_power_2);
+                $( "p3" ).html(msg.Battery_voltage);
+                $( "p4" ).html(msg.Battery_capacity);
+                $( "p5" ).html(msg.ph1_load);
+                $( "p6" ).html(msg.ph2_load);
+                $( "p7" ).html(msg.ph3_load);
             });
     }
 
     Monitor();
-
+    setInterval(Monitor,2000);
 
     </script>
-
-</body>
 
 </html>
